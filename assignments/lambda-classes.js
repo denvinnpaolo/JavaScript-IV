@@ -45,7 +45,7 @@ class Student extends Person{
     };
 
     sprintChallenge(subject){
-        return `${this.name} has begun sprint challenge on  ${subject}`
+        return `${this.name} has begun sprint challenge on ${subject}`
     };
 }
 class ProjectManagers extends Instructor{
@@ -64,3 +64,54 @@ class ProjectManagers extends Instructor{
     };
 
 }
+
+const CamPope = new Instructor({
+    name: 'Cameron Pope',
+    age: 35,
+    location: 'Lambda HQ',
+    catchPhrase: 'WEBPT7 is the best',
+    favLanguage: 'CSS',
+    speciality: 'Awesomeness'
+
+});
+
+const JoshKnell = new Instructor({
+    name: 'Joshua Knell',
+    age: 37,
+    location: 'Lambda HQ VIP Suite',
+    catchPhrase: 'WEBPT7 is the bestest',
+    favLanguage: 'Javascript',
+    speciality: 'Radness'
+
+});
+
+const DenvinnMagsino = new Student({
+    name: 'Denvinn Magsino',
+    age: 24,
+    location: 'Valley Glen',
+    favSubjects: ['HTML', 'CSS', 'JS'],
+    className: 'WEBPT7',
+    previousBackground: "A server who wanted to go to school for nursing"
+
+});
+
+const DavinaTaylor = new ProjectManagers({
+    name: 'Davina Taylor',
+    age: 25,
+    location: 'Lambda town',
+    gradClassName: 'CS101',
+    favInstructpr: 'Dan Frehner'
+
+});
+
+console.log(CamPope);
+console.log(CamPope.speak());
+console.log(JoshKnell);
+console.log(JoshKnell.speak());
+console.log(DenvinnMagsino);
+console.log(DenvinnMagsino.listsSubjects());
+console.log(DenvinnMagsino.PRAssignment('JS-IV'));
+console.log(DenvinnMagsino.sprintChallenge('Javascript-IV'));
+console.log(DavinaTaylor);
+console.log(DavinaTaylor.standUp('WEBPT7'));
+console.log(DavinaTaylor.debugsCode(DenvinnMagsino, 'Javascript'));
